@@ -82,7 +82,7 @@ function send (keystone, options, callback) {
 
 			if (options.sendPlainText) {
 				if (typeof options.sendPlainText === 'object') {
-					mail.text = htmlToText.fromString(message.html, options.sendPlainText);	
+					mail.text = htmlToText.fromString(message.html, options.sendPlainText);
 				} else {
 					mail.text = htmlToText.fromString(message.html);
 				}
@@ -109,9 +109,9 @@ function send (keystone, options, callback) {
 };
 
 function init (keystone) {
-  keystone.Email.prototype.send = function (options, callback) {
-    send.call(this, keystone, options, callback);
-  };
+	keystone.Email.prototype.send = function (options, callback) {
+		send.call(this, keystone, options, callback);
+	};
 }
 
 module.exports = init
